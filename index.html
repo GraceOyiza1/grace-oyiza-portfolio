@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' };
+    </script>
+    <title>Grace Oyiza | Front-End Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .blue-primary { background-color: #2563eb; }
+        .text-blue-primary { color: #2563eb; }
+        html { scroll-behavior: smooth; }
+        * { @apply transition-colors duration-300; }
+
+        @keyframes carousel {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-carousel {
+            display: flex;
+            width: max-content;
+            animation: carousel 30s linear infinite;
+        }
+        .carousel-wrapper { overflow: hidden; }
+    </style>
+</head>
+<body class="bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-100 font-sans selection:bg-blue-100 selection:text-blue-700">
+
+    <nav class="fixed w-full z-50 py-6 px-6 md:px-12 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-900">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-10">
+            <div class="w-10 h-10 bg-zinc-900 dark:bg-zinc-100 rounded-full flex items-center justify-center">
+                <div class="w-5 h-5 border-2 border-white dark:border-zinc-900 transform rotate-45"></div>
+            </div>
+            <ul class="hidden lg:flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">
+                <li><a href="#home" class="text-zinc-900 dark:text-zinc-100">Home</a></li>
+                <li><a href="#about" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition">About</a></li>
+                <li><a href="#services" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition">Services</a></li>
+                <li><a href="#projects" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition">Projects</a></li>
+                <li><a href="#certs" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition">Certificates</a></li>
+            </ul>
+        </div>
+        <div class="flex items-center gap-6">
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-800 transition">
+                <svg id="sun-icon" class="w-5 h-5 text-zinc-900 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l-2.12-2.12a1 1 0 11-1.414 1.414l2.12 2.12a1 1 0 001.414-1.414zM2.05 6.464L4.17 4.343a1 1 0 011.414 1.414L3.464 7.878a1 1 0 11-1.414-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <svg id="moon-icon" class="w-5 h-5 text-zinc-400 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                </svg>
+            </button>
+            <a href="https://wa.me/233550230278" target="_blank" class="border border-zinc-900 dark:border-zinc-100 text-zinc-900 dark:text-zinc-100 px-8 py-3 text-[11px] font-bold uppercase tracking-widest hover:bg-zinc-900 hover:text-white dark:hover:bg-zinc-100 dark:hover:text-zinc-900 transition group flex items-center gap-2">
+                <span>→</span> Work With Me
+            </a>
+        </div>
+    </div>
+</nav>
+
+    <header id="home" class="relative pt-48 pb-64 overflow-hidden bg-white dark:bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 items-center gap-12 relative z-10">
+            <div>
+                <h2 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">Hey, I'm <span class="text-zinc-900 dark:text-white">Grace Oyiza.</span></h2>
+                <p class="text-2xl text-zinc-500 font-light mb-12 max-w-lg leading-relaxed">A Front-End Developer helping startups develop outstanding web products.</p>
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8">
+                    <a href="#projects" class="bg-[#2563eb] text-white px-8 py-4 text-[11px] font-bold uppercase tracking-widest shadow-xl shadow-blue-200 flex items-center gap-3">
+                        <span>→</span> View My Projects
+                    </a>
+                    <div class="flex gap-6 text-[10px] font-bold uppercase tracking-widest text-zinc-400">
+                        <a href="https://github.com/GraceOyiza1/" target="_blank" class="hover:text-zinc-900 transition">Github</a>
+                        <a href="https://www.linkedin.com/in/grace-gift" target="_blank" class="hover:text-zinc-900 transition">Linkedin</a>
+                        <a href="https://wa.me/233550230278" target="_blank" class="hover:text-zinc-900 transition">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-zinc-800 rounded-lg shadow-2xl p-8 font-mono text-sm text-zinc-300 relative lg:-right-20">
+                <div class="flex gap-1.5 mb-8">
+                    <div class="w-3 h-3 rounded-full bg-red-500 opacity-50"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500 opacity-50"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500 opacity-50"></div>
+                </div>
+                <p class="text-zinc-500">&lt;?js</p>
+                <p class="mt-4"><span class="text-pink-400">const</span> developer = {</p>
+                <p class="ml-4">name: <span class="text-emerald-400">'Grace Oyiza'</span>,</p>
+                <p class="ml-4">focus: <span class="text-emerald-400">'Front-End Arch'</span>,</p>
+                <p class="ml-4">skills: [<span class="text-orange-300">'React', 'Tailwind'</span>],</p>
+                <p class="ml-4">goal: <span class="text-emerald-400">'Clarity'</span></p>
+                <p>};</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="carousel-wrapper py-8 border-y border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+        <div class="animate-carousel gap-16 items-center">
+            <span class="text-zinc-900 dark:text-white text-[11px] font-bold uppercase tracking-[0.4em] flex items-center gap-6 whitespace-nowrap">GitHub <div class="w-2 h-2 bg-blue-600 rotate-45"></div></span>
+            <span class="text-zinc-900 dark:text-white text-[11px] font-bold uppercase tracking-[0.4em] flex items-center gap-6 whitespace-nowrap">Tailwind Css <div class="w-2 h-2 bg-blue-600 rotate-45"></div></span>
+            <span class="text-zinc-900 dark:text-white text-[11px] font-bold uppercase tracking-[0.4em] flex items-center gap-6 whitespace-nowrap">React <div class="w-2 h-2 bg-blue-600 rotate-45"></div></span>
+            <span class="text-zinc-900 dark:text-white text-[11px] font-bold uppercase tracking-[0.4em] flex items-center gap-6 whitespace-nowrap">JavaScript <div class="w-2 h-2 bg-blue-600 rotate-45"></div></span>
+            <span class="text-zinc-900 dark:text-white text-[11px] font-bold uppercase tracking-[0.4em] flex items-center gap-6 whitespace-nowrap">UI Architecture <div class="w-2 h-2 bg-blue-600 rotate-45"></div></span>
+            <span class="text-zinc-900 dark:text-white text-[11px] font-bold uppercase tracking-[0.4em] flex items-center gap-6 whitespace-nowrap">Responsive Design <div class="w-2 h-2 bg-blue-600 rotate-45"></div></span>
+            <span class="text-zinc-900 dark:text-white text-[11px] font-bold uppercase tracking-[0.4em] flex items-center gap-6 whitespace-nowrap">Api Integration <div class="w-2 h-2 bg-blue-600 rotate-45"></div></span>
+            <span class="text-zinc-900 dark:text-white text-[11px] font-bold uppercase tracking-[0.4em] flex items-center gap-6 whitespace-nowrap">GitHub <div class="w-2 h-2 bg-blue-600 rotate-45"></div></span>
+            <span class="text-zinc-900 dark:text-white text-[11px] font-bold uppercase tracking-[0.4em] flex items-center gap-6 whitespace-nowrap">Tailwind Css <div class="w-2 h-2 bg-blue-600 rotate-45"></div></span>
+            <span class="text-zinc-900 dark:text-white text-[11px] font-bold uppercase tracking-[0.4em] flex items-center gap-6 whitespace-nowrap">React <div class="w-2 h-2 bg-blue-600 rotate-45"></div></span>
+            <span class="text-zinc-900 dark:text-white text-[11px] font-bold uppercase tracking-[0.4em] flex items-center gap-6 whitespace-nowrap">JavaScript <div class="w-2 h-2 bg-blue-600 rotate-45"></div></span>
+        </div>
+    </div>
+
+   <section id="about" class="py-32 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-20 bg-white dark:bg-zinc-950">
+    <div class="bg-zinc-100 dark:bg-zinc-800 aspect-square rounded-sm overflow-hidden flex items-center justify-center ">
+        <img 
+            src="assets/grace.jpeg" 
+            alt="Grace Oyiza" 
+            class="w-full h-full object-cover"
+        />
+    </div>
+    
+    <div class="flex flex-col justify-center">
+        <h3 class="text-zinc-900 dark:text-zinc-100 font-bold uppercase tracking-widest text-xs mb-8 italic">About Me</h3>
+        <div class="space-y-6 text-zinc-500 dark:text-zinc-400 leading-relaxed font-light text-lg">
+            <p>I am a dedicated Front-End Developer based in Ghana. I focus on building responsive, high-performance web applications using React and Tailwind CSS.</p>
+            <p>My approach combines clean architecture with creative UI implementation, ensuring every project is visually compelling and functional.</p>
+        </div>
+    </div>
+</section>
+    <section id="services" class="py-32 bg-zinc-50 dark:bg-zinc-900 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-zinc-900 dark:text-zinc-100 font-bold uppercase tracking-widest text-xs mb-20 text-center italic">Services</h3>
+            <div class="grid md:grid-cols-2 gap-24 items-center">
+                <div class="order-2 md:order-1">
+                    <h4 class="text-3xl font-bold mb-6 tracking-tight text-zinc-900 dark:text-white">Frontend Development</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400 font-light leading-relaxed mb-8">Building your product from a visual concept to a fully functional application using modern React and responsive design systems.</p>
+                    <a href="https://wa.me/233550230278" target="_blank" class="inline-block bg-zinc-900 text-white px-8 py-4 text-[11px] font-bold uppercase tracking-widest"><span>→</span> Start a Project</a>
+                </div>
+                <div class="order-1 md:order-2 bg-white dark:bg-zinc-800 p-12 shadow-xl rounded-sm transform rotate-3 relative border border-zinc-100 dark:border-zinc-700">
+                    <div class="absolute -top-6 -left-6 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">G</div>
+                    <div class="space-y-2">
+                        <div class="h-2 w-full bg-zinc-100 rounded"></div>
+                        <div class="h-2 w-3/4 bg-zinc-100 rounded"></div>
+                        <div class="h-2 w-5/6 bg-blue-100 rounded"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 px-6 max-w-7xl mx-auto bg-white dark:bg-zinc-950 space-y-40">
+        
+        <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24 group">
+            <div class="w-full md:w-1/2">
+                <p class="text-[10px] font-bold uppercase tracking-[0.4em] mb-4 text-blue-600 italic">Case Study</p>
+                <h3 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-zinc-900 dark:text-white">Plot-Twist <br>Movie Database</h3>
+                <p class="text-zinc-500 dark:text-zinc-400 font-light mb-10 text-lg leading-relaxed max-w-md">React hub for cinematic data with real-time API syncing via OMDb.</p>
+                <a href="https://plot-twist-movie-data-base.vercel.app/" target="_blank" class="text-[11px] font-bold uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform text-zinc-900 dark:text-white border-b border-zinc-200 dark:border-zinc-800 pb-2 w-fit">
+                    → View Project
+                </a>
+            </div>
+            <div class="w-full md:w-1/2 overflow-hidden bg-zinc-100 dark:bg-zinc-900 p-4 md:p-10 border border-zinc-100 dark:border-zinc-800">
+                <img src="assets/plottwist1.jpeg" class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Plot-Twist">
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-24 group">
+            <div class="w-full md:w-1/2">
+                <p class="text-[10px] font-bold uppercase tracking-[0.4em] mb-4 text-blue-600 italic">Client Work</p>
+                <h3 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-zinc-900 dark:text-white">Melvin Photography <br>Studio Site</h3>
+                <p class="text-zinc-500 dark:text-zinc-400 font-light mb-10 text-lg leading-relaxed max-w-md">A professional studio portfolio with custom dark mode and visual storytelling galleries.</p>
+                <a href="https://melvin-photography-studio.vercel.app/" target="_blank" class="text-[11px] font-bold uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform text-zinc-900 dark:text-white border-b border-zinc-200 dark:border-zinc-800 pb-2 w-fit">
+                    → View Project
+                </a>
+            </div>
+            <div class="w-full md:w-1/2 overflow-hidden bg-zinc-100 dark:bg-zinc-900 p-4 md:p-10 border border-zinc-100 dark:border-zinc-800">
+                <img src="assets/photography1.jpeg" class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Melvin Photography">
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24 group">
+            <div class="w-full md:w-1/2">
+                <p class="text-[10px] font-bold uppercase tracking-[0.4em] mb-4 text-blue-600 italic">Landing Page</p>
+                <h3 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-zinc-900 dark:text-white">KAMALA <br>Waters</h3>
+                <p class="text-zinc-500 dark:text-zinc-400 font-light mb-10 text-lg leading-relaxed max-w-md">Cinematic landing page for a premium water brand featuring a custom video sequencer and glassmorphism design.</p>
+                <a href="https://kamala-waters.vercel.app/" target="_blank" class="text-[11px] font-bold uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform text-zinc-900 dark:text-white border-b border-zinc-200 dark:border-zinc-800 pb-2 w-fit">
+                    → View Project
+                </a>
+            </div>
+            <div class="w-full md:w-1/2 overflow-hidden bg-zinc-100 dark:bg-zinc-900 p-4 md:p-10 border border-zinc-100 dark:border-zinc-800">
+                <img src="assets/kamala1.jpeg" class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="DevConnect">
+            </div>
+        </div>
+
+       
+
+    </section>
+
+    <section id="certs" class="py-32 px-6 bg-zinc-50 dark:bg-zinc-900">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-zinc-900 dark:text-zinc-100 font-bold uppercase tracking-widest text-xs mb-20 text-center italic">Certifications</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="cert-card bg-white dark:bg-zinc-800 p-6 rounded-sm border border-zinc-100 dark:border-zinc-700">
+                    <div class="aspect-video bg-zinc-200 dark:bg-zinc-700 mb-6 flex items-center justify-center overflow-hidden">
+                        <img src="assets/cert.png" alt="ALX Certificate" class="w-full h-full object-cover">
+                    </div>
+                    <h5 class="font-bold text-sm uppercase tracking-wider mb-2">ALX Virtual Assistant Training</h5>
+                    <p class="text-zinc-500 text-xs italic">Certified and Trusted</p>
+                </div>
+                <div class="cert-card bg-zinc-900 p-6 text-white">
+                    <div class="aspect-video bg-zinc-800 mb-6 flex items-center justify-center overflow-hidden">
+                        <img src="assets/cert1.jpeg" alt="Front-End Cert" class="w-full h-full object-cover">
+                    </div>
+                    <h5 class="font-bold text-sm uppercase tracking-wider mb-2">Front-End Professional Foundations</h5>
+                    <p class="text-zinc-400 text-xs italic">Soft Skills and Hard Skills</p>
+                </div>
+                <div class="cert-card bg-white dark:bg-zinc-800 p-6 rounded-sm border border-zinc-100 dark:border-zinc-700">
+                    <div class="aspect-video bg-zinc-200 dark:bg-zinc-700 mb-6 flex items-center justify-center overflow-hidden">
+                        <img src="assets/cert2.jpeg" alt="JavaScript Cert" class="w-full h-full object-cover">
+                    </div>
+                    <h5 class="font-bold text-sm uppercase tracking-wider mb-2">Front-End Developer Certificate</h5>
+                    <p class="text-zinc-500 text-xs italic">Problem Solving with JavaScript, Html, Css, React</p> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white dark:bg-zinc-950 pt-32 pb-20 px-6 border-t border-zinc-100 dark:border-zinc-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center pb-20 mb-10 gap-10">
+                <h2 class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">Need help developing your application?<br><span class="text-zinc-400 font-light text-xl italic">Let's get in touch on WhatsApp!</span></h2>
+                <a href="https://wa.me/233550230278" target="_blank" class="bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-10 py-5 text-[11px] font-bold uppercase tracking-widest shadow-xl flex items-center gap-3"><span>→</span> Contact Me</a>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 bg-zinc-900 dark:bg-zinc-100 rounded-full flex items-center justify-center">
+                        <div class="w-4 h-4 border-2 border-white dark:border-zinc-900 transform rotate-45"></div>
+                    </div>
+                    <p class="text-xs text-zinc-400 font-bold uppercase tracking-widest">© 2026 Grace Oyiza</p>
+                </div>
+                <div class="flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400">
+                    <a href="https://github.com/GraceOyiza1/" target="_blank" class="hover:text-zinc-900 transition">Github</a>
+                    <a href="https://www.linkedin.com/in/grace-gift" target="_blank" class="hover:text-zinc-900 transition">Linkedin</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        
+        const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (currentTheme === 'dark') htmlElement.classList.add('dark');
+
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+       </script>
+       <div class="ticker">
+  <div class="track">
+
+    <span>Grace Oyiza</span>
+    <span>Front-End Developer</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Responsive Design</span>
+    <span>Git & GitHub</span>
+    <span>Landing Pages</span>
+    <span>Open to Remote Work</span>
+
+    <!-- duplicate for smooth looping -->
+
+    <span>Grace Oyiza</span>
+    <span>Front-End Developer</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Responsive Design</span>
+    <span>Git & GitHub</span>
+    <span>Landing Pages</span>
+    <span>Open to Remote Work</span>
+
+  </div>
+</div>
+</body>
+</html>

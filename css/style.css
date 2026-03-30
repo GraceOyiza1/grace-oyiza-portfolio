@@ -1,0 +1,100 @@
+/* Custom Geometric Shapes */
+.hero-bg-accent {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 45%;
+    background-color: #2563eb;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
+}
+
+@media (max-width: 1024px) {
+    .hero-bg-accent {
+        display: none;
+    }
+}
+
+.footer-bg {
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.cert-card {
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- NEW: Infinite Carousel Animation --- */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-carousel {
+    display: flex;
+    width: max-content;
+    /* Critical for seamless looping */
+    animation: scroll 30s linear infinite;
+}
+
+/* Pause on hover for better UX */
+.animate-carousel:hover {
+    animation-play-state: paused;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    background-color: #1a1a1a;
+    width: 100%;
+    border-top: 1px solid #2d2d2d;
+    border-bottom: 1px solid #2d2d2d;
+}
+
+.ticker {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.track {
+    display: flex;
+    gap: 60px;
+    white-space: nowrap;
+    animation: scroll 18s linear infinite;
+}
+
+.track span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@keyframes scroll {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+}
+
+.track span {
+    font-size: 16px;
+    font-weight: 500;
+    color: lightblue;
+}
