@@ -44,20 +44,27 @@
             </ul>
         </div>
         <div class="flex items-center gap-6">
-            <button id="theme-toggle" class="p-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-800 transition">
-                <svg id="sun-icon" class="w-5 h-5 text-zinc-900 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l-2.12-2.12a1 1 0 11-1.414 1.414l2.12 2.12a1 1 0 001.414-1.414zM2.05 6.464L4.17 4.343a1 1 0 011.414 1.414L3.464 7.878a1 1 0 11-1.414-1.414z" clip-rule="evenodd"/>
-                </svg>
-                <svg id="moon-icon" class="w-5 h-5 text-zinc-400 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
-                </svg>
-            </button>
+            <div class="flex items-center gap-2 bg-zinc-100 dark:bg-zinc-800 rounded-full p-1">
+                <button id="light-btn" class="light-toggle-btn px-4 py-2 rounded-full text-[11px] font-bold uppercase tracking-wider flex items-center gap-2 text-zinc-900 dark:text-zinc-400 transition-all duration-300 bg-white dark:bg-transparent">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l-2.12-2.12a1 1 0 11-1.414 1.414l2.12 2.12a1 1 0 001.414-1.414zM2.05 6.464L4.17 4.343a1 1 0 011.414 1.414L3.464 7.878a1 1 0 11-1.414-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                    Light
+                </button>
+                <button id="dark-btn" class="dark-toggle-btn px-4 py-2 rounded-full text-[11px] font-bold uppercase tracking-wider flex items-center gap-2 text-zinc-400 dark:text-zinc-100 transition-all duration-300 bg-transparent dark:bg-zinc-900">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                    </svg>
+                    Dark
+                </button>
+            </div>
             <a href="https://wa.me/233550230278" target="_blank" class="border border-zinc-900 dark:border-zinc-100 text-zinc-900 dark:text-zinc-100 px-8 py-3 text-[11px] font-bold uppercase tracking-widest hover:bg-zinc-900 hover:text-white dark:hover:bg-zinc-100 dark:hover:text-zinc-900 transition group flex items-center gap-2">
                 <span>→</span> Work With Me
             </a>
         </div>
     </div>
 </nav>
+
 
     <header id="home" class="relative pt-48 pb-64 overflow-hidden bg-white dark:bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 items-center gap-12 relative z-10">
@@ -157,7 +164,7 @@
         
         <div class="p-8 bg-zinc-50 dark:bg-zinc-900/50 rounded-3xl border border-zinc-100 dark:border-zinc-800 hover:border-[#aa3bff] transition-all duration-500 group">
             <div class="w-12 h-12 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[#aa3bff] transition-colors">
-                <span class="text-xl group-hover:scale-110 transition-transform">GO</span>
+                <span class="text-xl group-hover:scale-110 transition-transform"><></span>
             </div>
             <h4 class="text-lg font-black mb-4 text-zinc-900 dark:text-white uppercase tracking-tight">Core Frontend</h4>
             <div class="flex flex-wrap gap-2">
@@ -171,7 +178,7 @@
 
         <div class="p-8 bg-zinc-50 dark:bg-zinc-900/50 rounded-3xl border border-zinc-100 dark:border-zinc-800 hover:border-[#aa3bff] transition-all duration-500 group">
             <div class="w-12 h-12 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[#aa3bff] transition-colors">
-                <span class="text-xl group-hover:scale-110 transition-transform">GO</span>
+                <span class="text-xl group-hover:scale-110 transition-transform"><></span>
             </div>
             <h4 class="text-lg font-black mb-4 text-zinc-900 dark:text-white uppercase tracking-tight">Design & Workflow</h4>
             <div class="flex flex-wrap gap-2">
@@ -185,7 +192,7 @@
 
         <div class="p-8 bg-zinc-50 dark:bg-zinc-900/50 rounded-3xl border border-zinc-100 dark:border-zinc-800 hover:border-[#aa3bff] transition-all duration-500 group">
             <div class="w-12 h-12 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[#aa3bff] transition-colors">
-                <span class="text-xl group-hover:scale-110 transition-transform">GO</span>
+                <span class="text-xl group-hover:scale-110 transition-transform"><></span>
             </div>
             <h4 class="text-lg font-black mb-4 text-zinc-900 dark:text-white uppercase tracking-tight">Professional Ops</h4>
             <div class="flex flex-wrap gap-2">
@@ -210,8 +217,8 @@
                     → View Project
                 </a>
             </div>
-            <div class="w-full md:w-1/2 overflow-hidden bg-zinc-100 dark:bg-zinc-900 p-4 md:p-10 border border-zinc-100 dark:border-zinc-800">
-                <img src="assets/plottwist1.jpeg" class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Plot-Twist">
+            <div class="w-full md:w-1/2 overflow-hidden bg-white dark:bg-zinc-900/50 p-4 md:p-10 border border-zinc-200 dark:border-zinc-800 rounded-lg">
+                <img src="assets/plottwist1.jpeg" class="w-full h-auto transition-all duration-500 group-hover:scale-105" alt="Plot-Twist">
             </div>
         </div>
 
@@ -224,8 +231,8 @@
                     → View Project
                 </a>
             </div>
-            <div class="w-full md:w-1/2 overflow-hidden bg-zinc-100 dark:bg-zinc-900 p-4 md:p-10 border border-zinc-100 dark:border-zinc-800">
-                <img src="assets/photography1.jpeg" class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Melvin Photography">
+            <div class="w-full md:w-1/2 overflow-hidden bg-white dark:bg-zinc-900/50 p-4 md:p-10 border border-zinc-200 dark:border-zinc-800 rounded-lg">
+                <img src="assets/photography1.jpeg" class="w-full h-auto transition-all duration-500 group-hover:scale-105" alt="Melvin Photography">
             </div>
         </div>
 
@@ -242,8 +249,8 @@
         </a>
     </div>
     
-    <div class="w-full md:w-1/2 overflow-hidden bg-zinc-100 dark:bg-zinc-900 p-4 md:p-10 border border-zinc-100 dark:border-zinc-800">
-        <img src="assets/gread.jpeg" class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="GREAD News Platform">
+    <div class="w-full md:w-1/2 overflow-hidden bg-white dark:bg-zinc-900/50 p-4 md:p-10 border border-zinc-200 dark:border-zinc-800 rounded-lg">
+        <img src="assets/gread.jpeg" class="w-full h-auto transition-all duration-500 group-hover:scale-105" alt="GREAD News Platform">
     </div>                                                                                                                                                                               
 </div>
 
@@ -256,8 +263,8 @@
                     → View Project
                 </a>
             </div>
-            <div class="w-full md:w-1/2 overflow-hidden bg-zinc-100 dark:bg-zinc-900 p-4 md:p-10 border border-zinc-100 dark:border-zinc-800">
-                <img src="assets/kamala1.jpeg" class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="DevConnect">
+            <div class="w-full md:w-1/2 overflow-hidden bg-white dark:bg-zinc-900/50 p-4 md:p-10 border border-zinc-200 dark:border-zinc-800 rounded-lg">
+                <img src="assets/kamala1.jpeg" class="w-full h-auto transition-all duration-500 group-hover:scale-105" alt="DevConnect">
             </div>
         </div>
 
@@ -297,7 +304,7 @@
     <footer class="bg-white dark:bg-zinc-950 pt-32 pb-20 px-6 border-t border-zinc-100 dark:border-zinc-900">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center pb-20 mb-10 gap-10">
-                <h2 class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">Need help developing your application?<br><span class="text-zinc-400 font-light text-xl italic">Let's get in touch on WhatsApp!</span></h2>
+                <h2 class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">Need help developing your application?<br><span class="text-zinc-400 font-light text-xl italic">Let's get in touch!</span></h2>
                 <a href="https://wa.me/233550230278" target="_blank" class="bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-10 py-5 text-[11px] font-bold uppercase tracking-widest shadow-xl flex items-center gap-3"><span>→</span> Contact Me</a>
             </div>
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -316,21 +323,25 @@
     </footer>
 
     <script>
-        const themeToggle = document.getElementById('theme-toggle');
+        const lightBtn = document.getElementById('light-btn');
+        const darkBtn = document.getElementById('dark-btn');
         const htmlElement = document.documentElement;
         
         const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         if (currentTheme === 'dark') htmlElement.classList.add('dark');
 
-        themeToggle.addEventListener('click', () => {
-            if (htmlElement.classList.contains('dark')) {
-                htmlElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
+        function setTheme(theme) {
+            if (theme === 'dark') {
                 htmlElement.classList.add('dark');
                 localStorage.setItem('theme', 'dark');
+            } else {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
             }
-        });
+        }
+
+        lightBtn.addEventListener('click', () => setTheme('light'));
+        darkBtn.addEventListener('click', () => setTheme('dark'));
        </script>
        <div class="ticker">
   <div class="track">
