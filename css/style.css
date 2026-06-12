@@ -79,22 +79,5 @@ html {
 .track span {
     font-size: 16px;
     font-weight: 500;
-}
-
-@keyframes scroll {
-
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-
-}
-
-.track span {
-    font-size: 16px;
-    font-weight: 500;
     color: #aa3bff;
 }
