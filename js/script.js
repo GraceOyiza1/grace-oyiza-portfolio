@@ -103,30 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => toggleMobileMenu(false));
     });
 
-    // -------------------------------------------------------------
-    // 4. Copy Code Snippet (Hero Terminal)
-    // -------------------------------------------------------------
-    const copyCodeBtn = document.getElementById('copy-code-btn');
-    const codeText = document.getElementById('code-content');
-    if (copyCodeBtn && codeText) {
-        copyCodeBtn.addEventListener('click', async () => {
-            try {
-                await navigator.clipboard.writeText(codeText.innerText);
-                const originalHtml = copyCodeBtn.innerHTML;
-                copyCodeBtn.innerHTML = `
-                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span class="text-xs text-emerald-400 font-mono">Copied!</span>
-                `;
-                setTimeout(() => {
-                    copyCodeBtn.innerHTML = originalHtml;
-                }, 2000);
-            } catch (err) {
-                console.error('Failed to copy code: ', err);
-            }
-        });
-    }
+
 
     // -------------------------------------------------------------
     // 5. Copy Email Action with Toast
