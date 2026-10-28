@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-100 font-sans selection:bg-brand-500/20 selection:text-brand-600 dark:selection:text-brand-400 transition-colors duration-300 antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-zinc-950 text-zinc-100 font-sans selection:bg-brand-500/20 selection:text-brand-400 antialiased min-h-screen flex flex-col justify-between">
 
     <!-- ================================================================= -->
     <!-- NAVIGATION BAR                                                    -->
@@ -67,52 +67,36 @@
                     G
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-bold text-base tracking-tight text-zinc-900 dark:text-white leading-tight">Grace Oyiza</span>
-                    <span class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Front-End Developer</span>
+                    <span class="font-bold text-base tracking-tight text-white leading-tight">Grace Oyiza</span>
+                    <span class="text-xs text-zinc-400 font-medium">Front-End Developer</span>
                 </div>
             </a>
 
             <!-- Desktop Nav Links -->
-            <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-zinc-600 dark:text-zinc-300">
-                <li><a href="#home" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Home</a></li>
-                <li><a href="#about" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About</a></li>
-                <li><a href="#skills" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Skills</a></li>
-                <li><a href="#projects" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Projects</a></li>
-                <li><a href="#testimonials" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Reviews</a></li>
-                <li><a href="#services" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Services</a></li>
-                <li><a href="#certs" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Certifications</a></li>
-                <li><a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a></li>
+            <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-zinc-300">
+                <li><a href="#home" class="hover:text-brand-400 transition-colors">Home</a></li>
+                <li><a href="#about" class="hover:text-brand-400 transition-colors">About</a></li>
+                <li><a href="#skills" class="hover:text-brand-400 transition-colors">Skills</a></li>
+                <li><a href="#projects" class="hover:text-brand-400 transition-colors">Projects</a></li>
+                <li><a href="#testimonials" class="hover:text-brand-400 transition-colors">Reviews</a></li>
+                <li><a href="#services" class="hover:text-brand-400 transition-colors">Services</a></li>
+                <li><a href="#certs" class="hover:text-brand-400 transition-colors">Certifications</a></li>
+                <li><a href="#contact" class="hover:text-brand-400 transition-colors">Contact</a></li>
             </ul>
 
-            <!-- Right Controls: Theme Toggle, Resume & Primary CTA -->
+            <!-- Right Controls: Resume & Primary CTA -->
             <div class="flex items-center gap-2.5 sm:gap-3.5">
                 
                 <!-- Resume Download Link -->
-                <a href="assets/GraceOyiza_Frontend_Resume.pdf" target="_blank" rel="noopener noreferrer" download="GraceOyiza_Frontend_Resume.pdf" class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-50 hover:bg-brand-100 dark:bg-brand-950/60 dark:hover:bg-brand-900/60 text-brand-700 dark:text-brand-300 border border-brand-200 dark:border-brand-800/80 transition-all hover:scale-[1.02]">
-                    <svg class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <a href="assets/GraceOyiza_Frontend_Resume.pdf" target="_blank" rel="noopener noreferrer" download="GraceOyiza_Frontend_Resume.pdf" class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-950/60 hover:bg-brand-900/60 text-brand-300 border border-brand-800/80 transition-all hover:scale-[1.02]">
+                    <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                     <span>Resume</span>
                 </a>
 
-                <!-- Theme Switcher Pills -->
-                <div class="flex items-center bg-zinc-100 dark:bg-zinc-900 rounded-full p-1 border border-zinc-200 dark:border-zinc-800">
-                    <button id="light-btn" aria-label="Switch to Light Mode" class="px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
-                        <span class="hidden sm:inline">Light</span>
-                    </button>
-                    <button id="dark-btn" aria-label="Switch to Dark Mode" class="px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                        </svg>
-                        <span class="hidden sm:inline">Dark</span>
-                    </button>
-                </div>
-
                 <!-- CTA Button (Direct WhatsApp) -->
-                <a href="https://wa.me/233550230278" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-zinc-900 hover:bg-brand-600 dark:bg-white dark:text-zinc-950 dark:hover:bg-brand-400 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-sm hover:shadow-brand-500/20 hover:scale-[1.02]">
+                <a href="https://wa.me/233550230278" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-white hover:bg-brand-400 text-zinc-950 hover:text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-sm hover:scale-[1.02]">
                     <span>Let's Talk</span>
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
@@ -163,19 +147,37 @@
     <!-- ================================================================= -->
     <!-- HERO SECTION                                                      -->
     <!-- ================================================================= -->
-    <header id="home" class="relative pt-36 md:pt-48 pb-20 md:pb-28 overflow-hidden">
+    <header id="home" class="relative pt-36 md:pt-44 pb-24 md:pb-36 overflow-hidden bg-zinc-950 text-white min-h-[640px] flex items-center">
         
-        <!-- Subtle Emerald Background Glows -->
-        <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[650px] h-[450px] bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[350px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <!-- Background Full-Bleed Image Container -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <!-- Full-Bleed Background Image (fills the whole hero background) -->
+            <img 
+                src="assets/grace.jpeg" 
+                alt="Grace Oyiza - Front-End Developer" 
+                class="w-full h-full object-cover object-[center_20%] md:object-[82%_25%] opacity-85"
+            />
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Horizontal Dark Gradient Scrim (Deep dark on the left for text contrast, fading across so Grace and the atmosphere show clearly) -->
+            <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/90 via-45% md:via-zinc-950/60 md:via-60% to-zinc-950/20"></div>
             
-            <!-- Centered Headline & Call to Actions -->
-            <div class="max-w-4xl mx-auto text-center flex flex-col items-center space-y-8 reveal">
+            <!-- Mobile Dark Scrim (Ensures text readability on small screens) -->
+            <div class="md:hidden absolute inset-0 bg-zinc-950/70"></div>
+
+            <!-- Top and Bottom Smooth Section Vignettes -->
+            <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-zinc-950 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-zinc-950 to-transparent"></div>
+
+            <!-- Ambient Emerald Glow Behind Headline -->
+            <div class="absolute -top-20 -left-20 w-96 h-96 bg-brand-500/15 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <!-- Left-Aligned Headline & Actions (Matches Reference Layout) -->
+            <div class="max-w-2xl lg:max-w-3xl space-y-7 reveal">
                 
                 <!-- Live Availability Badge -->
-                <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-brand-50 dark:bg-brand-950/40 border border-brand-200 dark:border-brand-800/60 text-brand-700 dark:text-brand-400 text-xs sm:text-sm font-medium">
+                <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-brand-950/70 border border-brand-800/80 text-brand-400 text-xs sm:text-sm font-medium backdrop-blur-sm">
                     <span class="relative flex h-2.5 w-2.5">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500"></span>
@@ -183,19 +185,19 @@
                     <span>Available for Full-Time Roles & Freelance Projects</span>
                 </div>
 
-                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-[1.18] text-center">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.18]">
                     Your idea deserves more than a <br class="hidden sm:inline" /> good-looking website. <br/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-emerald-500 to-teal-400">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-emerald-400 to-teal-300">
                         It deserves a product that works beautifully.
                     </span>
                 </h1>
 
-                <p class="text-base sm:text-lg md:text-xl text-zinc-600 dark:text-zinc-300 font-normal max-w-3xl mx-auto leading-relaxed text-center">
-                    I'm <strong class="font-semibold text-zinc-900 dark:text-white">Grace Oyiza</strong>. I build modern, responsive web applications that turn business ideas into real, usable digital experiences — combining thoughtful UI design, reliable functionality, and clean, maintainable code.
+                <p class="text-base sm:text-lg text-zinc-300 font-normal max-w-2xl leading-relaxed">
+                    I'm <strong class="font-semibold text-white">Grace Oyiza</strong>. I build modern, responsive web applications that turn business ideas into real, usable digital experiences — combining thoughtful UI design, reliable functionality, and clean, maintainable code.
                 </p>
 
                 <!-- Primary CTAs -->
-                <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                <div class="flex flex-wrap items-center gap-4 pt-2">
                     <a href="#projects" class="inline-flex items-center gap-2.5 bg-brand-600 hover:bg-brand-500 text-white px-7 py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 shadow-lg shadow-brand-500/25 hover:scale-[1.02]">
                         <span>View Projects</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -204,14 +206,14 @@
                     </a>
 
                     <!-- Dedicated Download CV Button -->
-                    <a href="assets/GraceOyiza_Frontend_Resume.pdf" target="_blank" rel="noopener noreferrer" download="GraceOyiza_Frontend_Resume.pdf" class="inline-flex items-center gap-2.5 bg-white dark:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-700 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-700 px-7 py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 shadow-sm hover:scale-[1.02]">
-                        <svg class="w-4 h-4 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="assets/GraceOyiza_Frontend_Resume.pdf" target="_blank" rel="noopener noreferrer" download="GraceOyiza_Frontend_Resume.pdf" class="inline-flex items-center gap-2.5 bg-zinc-900/90 hover:bg-zinc-800 text-white border border-zinc-700/80 px-7 py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 shadow-sm hover:scale-[1.02] backdrop-blur-sm">
+                        <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
                         <span>Download CV</span>
                     </a>
 
-                    <a href="#contact" class="inline-flex items-center gap-2.5 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-800 px-6 py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 hover:scale-[1.02]">
+                    <a href="#contact" class="inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/15 text-white border border-white/15 px-6 py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 hover:scale-[1.02] backdrop-blur-sm">
                         <span>Work With Me</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -220,20 +222,20 @@
                 </div>
 
                 <!-- Social Quick Links -->
-                <div class="flex items-center justify-center gap-6 pt-2 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                    <a href="https://github.com/GraceOyiza1/" target="_blank" class="flex items-center gap-2 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                <div class="flex items-center gap-6 pt-3 text-sm font-medium text-zinc-400">
+                    <a href="https://github.com/GraceOyiza1/" target="_blank" class="flex items-center gap-2 hover:text-brand-400 transition-colors">
                         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                         </svg>
                         <span>GitHub</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/grace-gift" target="_blank" class="flex items-center gap-2 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                    <a href="https://www.linkedin.com/in/grace-gift" target="_blank" class="flex items-center gap-2 hover:text-brand-400 transition-colors">
                         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                         </svg>
                         <span>LinkedIn</span>
                     </a>
-                    <a href="https://wa.me/233550230278" target="_blank" class="flex items-center gap-2 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                    <a href="https://wa.me/233550230278" target="_blank" class="flex items-center gap-2 hover:text-brand-400 transition-colors">
                         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
                         </svg>

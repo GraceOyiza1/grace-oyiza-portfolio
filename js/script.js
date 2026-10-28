@@ -4,48 +4,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // -------------------------------------------------------------
-    // 1. Theme Toggle (Light / Dark)
+    // 1. Permanent Dark Theme Mode
     // -------------------------------------------------------------
-    const lightBtn = document.getElementById('light-btn');
-    const darkBtn = document.getElementById('dark-btn');
-    const htmlElement = document.documentElement;
-
-    function applyTheme(theme) {
-        if (theme === 'dark') {
-            htmlElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-            if (darkBtn && lightBtn) {
-                darkBtn.classList.add('bg-zinc-800', 'text-white', 'shadow-sm');
-                darkBtn.classList.remove('text-zinc-400');
-                lightBtn.classList.remove('bg-white', 'text-zinc-900', 'shadow-sm');
-                lightBtn.classList.add('text-zinc-400');
-            }
-        } else {
-            htmlElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-            if (darkBtn && lightBtn) {
-                lightBtn.classList.add('bg-white', 'text-zinc-900', 'shadow-sm');
-                lightBtn.classList.remove('text-zinc-400');
-                darkBtn.classList.remove('bg-zinc-800', 'text-white', 'shadow-sm');
-                darkBtn.classList.add('text-zinc-400');
-            }
-        }
-    }
-
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = savedTheme ? savedTheme : (prefersDark ? 'dark' : 'light');
-    applyTheme(initialTheme);
-
-    if (lightBtn) lightBtn.addEventListener('click', () => applyTheme('light'));
-    if (darkBtn) darkBtn.addEventListener('click', () => applyTheme('dark'));
-
-    // Listen for OS theme changes if not overridden
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-            applyTheme(e.matches ? 'dark' : 'light');
-        }
-    });
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
 
     // -------------------------------------------------------------
     // 2. Navigation Scroll State
