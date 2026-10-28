@@ -140,3 +140,12 @@ html {
         transition: none !important;
     }
 }
+
+/* Project Filter Transitions */
+.project-card {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.project-card.is-hidden {
+    display: none !important;
+}

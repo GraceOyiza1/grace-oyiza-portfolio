@@ -241,5 +241,61 @@ document.addEventListener('DOMContentLoaded', () => {
         // Fallback for older browsers
         revealElements.forEach(el => el.classList.add('active'));
     }
+
+    // -------------------------------------------------------------
+    // 9. Real-Time Telemetry / Ghana Local Time Clock
+    // -------------------------------------------------------------
+    const ghanaTimeEl = document.getElementById('ghana-time');
+    function updateGhanaTime() {
+        if (!ghanaTimeEl) return;
+        try {
+            const now = new Date();
+            const timeString = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'Africa/Accra',
+                hour: 'numeric',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            }).format(now);
+            ghanaTimeEl.textContent = `${timeString} GMT • Active & Available`;
+        } catch (e) {
+            ghanaTimeEl.textContent = 'UTC+0 • Active & Available';
+        }
+    }
+    updateGhanaTime();
+    setInterval(updateGhanaTime, 1000);
+
+    // -------------------------------------------------------------
+    // 10. Interactive Project Category Filtering
+    // -------------------------------------------------------------
+    const filterBtns = document.querySelectorAll('.project-filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter');
+
+            // Toggle active pill styles
+            filterBtns.forEach(b => {
+                b.classList.remove('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-500/20');
+                b.classList.add('bg-zinc-100', 'dark:bg-zinc-900', 'text-zinc-700', 'dark:text-zinc-300', 'border', 'border-zinc-200', 'dark:border-zinc-800');
+            });
+            btn.classList.add('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-500/20');
+            btn.classList.remove('bg-zinc-100', 'dark:bg-zinc-900', 'text-zinc-700', 'dark:text-zinc-300', 'border', 'border-zinc-200', 'dark:border-zinc-800');
+
+            // Filter project cards
+            projectCards.forEach(card => {
+                const categories = card.getAttribute('data-category') || '';
+                if (filter === 'all' || categories.split(' ').includes(filter)) {
+                    card.classList.remove('is-hidden');
+                    setTimeout(() => {
+                        card.classList.add('active');
+                    }, 50);
+                } else {
+                    card.classList.add('is-hidden');
+                }
+            });
+        });
+    });
 });
 
