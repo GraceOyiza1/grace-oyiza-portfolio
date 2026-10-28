@@ -257,9 +257,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 second: '2-digit',
                 hour12: true
             }).format(now);
-            ghanaTimeEl.textContent = `${timeString} GMT • Active & Available`;
+            ghanaTimeEl.textContent = `${timeString} GMT`;
         } catch (e) {
-            ghanaTimeEl.textContent = 'UTC+0 • Active & Available';
+            ghanaTimeEl.textContent = 'UTC+0';
         }
     }
     updateGhanaTime();
