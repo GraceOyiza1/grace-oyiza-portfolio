@@ -1,83 +1,94 @@
-/* Custom Geometric Shapes */
-.hero-bg-accent {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 45%;
-    background-color: #2563eb;
-    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
-    z-index: 0;
-}
+/* ==========================================================================
+   Grace Oyiza - Portfolio Stylesheet
+   ========================================================================== */
 
-@media (max-width: 1024px) {
-    .hero-bg-accent {
-        display: none;
-    }
-}
-
-.footer-bg {
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-}
-
-.cert-card {
-    transition: transform 0.3s ease;
-}
-
-.cert-card:hover {
-    transform: translateY(-8px);
-}
-
+/* Custom Smooth Scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* --- NEW: Infinite Carousel Animation --- */
-@keyframes scroll {
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #27272a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+}
+
+/* Seamless Marquee / Carousel Animation */
+@keyframes scrollMarquee {
     0% {
         transform: translateX(0);
     }
-
     100% {
         transform: translateX(-50%);
     }
 }
 
-.animate-carousel {
+.animate-marquee {
     display: flex;
     width: max-content;
-    /* Critical for seamless looping */
-    animation: scroll 30s linear infinite;
+    animation: scrollMarquee 28s linear infinite;
 }
 
-/* Pause on hover for better UX */
-.animate-carousel:hover {
+.animate-marquee:hover {
     animation-play-state: paused;
 }
 
-.carousel-wrapper {
-    overflow: hidden;
-    background-color: #1a1a1a;
-    width: 100%;
-    border-top: 1px solid #2d2d2d;
-    border-bottom: 1px solid #2d2d2d;
+/* Certificate Card Micro-Interactions */
+.cert-card {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
-.ticker {
-    width: 100%;
-    overflow: hidden;
-    margin-top: 20px;
+.cert-card:hover {
+    transform: translateY(-6px);
 }
 
-.track {
-    display: flex;
-    gap: 60px;
-    white-space: nowrap;
-    animation: scroll 18s linear infinite;
+/* Glassmorphism helpers */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
-.track span {
-    font-size: 16px;
-    font-weight: 500;
-    color: #aa3bff;
+.dark .glass-panel {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Subtle Gradient Borders */
+.gradient-border {
+    position: relative;
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.5), rgba(99, 102, 241, 0.1), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
