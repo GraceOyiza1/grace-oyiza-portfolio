@@ -156,7 +156,7 @@
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
             
             <!-- Left Headline & Call to Actions (7 Columns) -->
-            <div class="lg:col-span-7 space-y-7">
+            <div class="lg:col-span-7 space-y-7 reveal">
                 
                 <!-- Live Availability Badge -->
                 <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-brand-50 dark:bg-brand-950/40 border border-brand-200 dark:border-brand-800/60 text-brand-700 dark:text-brand-400 text-xs sm:text-sm font-medium">
@@ -220,7 +220,7 @@
             </div>
 
             <!-- Right Interactive Code Terminal (5 Columns) -->
-            <div class="lg:col-span-5">
+            <div class="lg:col-span-5 reveal-right delay-200">
                 <div class="bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl overflow-hidden font-mono text-xs sm:text-sm text-zinc-300">
                     
                     <!-- Terminal Top Bar -->
@@ -266,7 +266,7 @@
     <!-- TRUST & HIGHLIGHT METRICS STRIP                                   -->
     <!-- ================================================================= -->
     <section class="max-w-7xl mx-auto px-6 py-6 w-full">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 rounded-3xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 shadow-sm">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 rounded-3xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 shadow-sm reveal">
             <div class="text-center p-3">
                 <div class="text-3xl sm:text-4xl md:text-5xl font-black text-brand-600 dark:text-brand-400">6+</div>
                 <div class="text-sm font-semibold text-zinc-600 dark:text-zinc-300 mt-2">Production Projects</div>
@@ -354,7 +354,7 @@
         <div class="grid md:grid-cols-12 gap-12 items-center">
             
             <!-- Left Portrait Card (5 Columns) -->
-            <div class="md:col-span-5 relative group">
+            <div class="md:col-span-5 relative group reveal-left">
                 <div class="relative w-full aspect-square rounded-3xl overflow-hidden border-2 border-zinc-200 dark:border-zinc-800 shadow-xl bg-zinc-100 dark:bg-zinc-900">
                     <img 
                         src="assets/grace.jpeg" 
@@ -370,7 +370,7 @@
             </div>
 
             <!-- Right Bio Content (7 Columns) -->
-            <div class="md:col-span-7 space-y-6">
+            <div class="md:col-span-7 space-y-6 reveal-right">
                 <div>
                     <span class="text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">About Me</span>
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white mt-2 tracking-tight leading-tight">
@@ -390,17 +390,29 @@
                 <!-- Three Key Pillars -->
                 <div class="grid sm:grid-cols-3 gap-4 pt-4">
                     <div class="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800">
-                        <div class="w-9 h-9 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold text-lg mb-3">⚡</div>
+                        <div class="w-9 h-9 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-3">
+                            <svg class="w-4 h-4 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
                         <h4 class="font-bold text-sm text-zinc-900 dark:text-white">Clean & Fast</h4>
                         <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1 leading-relaxed">Lightweight, semantic code optimized for sub-second page loads.</p>
                     </div>
                     <div class="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800">
-                        <div class="w-9 h-9 rounded-xl bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center font-bold text-lg mb-3">📱</div>
+                        <div class="w-9 h-9 rounded-xl bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-3">
+                            <svg class="w-4 h-4 text-teal-600 dark:text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
                         <h4 class="font-bold text-sm text-zinc-900 dark:text-white">Mobile-First</h4>
                         <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1 leading-relaxed">Flawless user experience across phones, tablets, and desktops.</p>
                     </div>
                     <div class="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800">
-                        <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg mb-3">🧩</div>
+                        <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3">
+                            <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                            </svg>
+                        </div>
                         <h4 class="font-bold text-sm text-zinc-900 dark:text-white">Modular UI</h4>
                         <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1 leading-relaxed">Reusable component systems that scale gracefully with your product.</p>
                     </div>
@@ -414,7 +426,7 @@
     <!-- SKILLSET SECTION                                                  -->
     <!-- ================================================================= -->
     <section id="skills" class="py-24 px-6 max-w-7xl mx-auto w-full border-t border-zinc-200/80 dark:border-zinc-800/80">
-        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3 reveal">
             <span class="text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Technical Expertise</span>
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white tracking-tight">Skills & Technologies</h2>
             <p class="text-zinc-600 dark:text-zinc-400 text-base sm:text-lg">The languages, frameworks, and developer workflows I use to build scalable products.</p>
@@ -423,7 +435,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             <!-- Card 1: Core Frontend -->
-            <div class="p-8 bg-zinc-50 dark:bg-zinc-900/60 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500 transition-all duration-300 group shadow-sm">
+            <div class="p-8 bg-zinc-50 dark:bg-zinc-900/60 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500 transition-all duration-300 group shadow-sm reveal delay-100">
                 <div class="w-12 h-12 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform text-brand-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -442,7 +454,7 @@
             </div>
 
             <!-- Card 2: Developer Workflow -->
-            <div class="p-8 bg-zinc-50 dark:bg-zinc-900/60 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500 transition-all duration-300 group shadow-sm">
+            <div class="p-8 bg-zinc-50 dark:bg-zinc-900/60 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500 transition-all duration-300 group shadow-sm reveal delay-200">
                 <div class="w-12 h-12 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform text-teal-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
@@ -461,7 +473,7 @@
             </div>
 
             <!-- Card 3: Professional Deliverables -->
-            <div class="p-8 bg-zinc-50 dark:bg-zinc-900/60 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500 transition-all duration-300 group shadow-sm">
+            <div class="p-8 bg-zinc-50 dark:bg-zinc-900/60 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500 transition-all duration-300 group shadow-sm reveal delay-300">
                 <div class="w-12 h-12 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform text-emerald-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -489,14 +501,14 @@
     <section id="projects" class="py-24 px-6 max-w-7xl mx-auto w-full border-t border-zinc-200/80 dark:border-zinc-800/80 space-y-24">
         
         <!-- Section Title -->
-        <div class="text-center max-w-2xl mx-auto space-y-3">
+        <div class="text-center max-w-2xl mx-auto space-y-3 reveal">
             <span class="text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Portfolio</span>
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white tracking-tight">Featured Projects</h2>
             <p class="text-zinc-600 dark:text-zinc-400 text-base sm:text-lg">Real-world web applications, SaaS tools, and client platforms engineered with clean code and modern front-end stacks.</p>
         </div>
 
         <!-- PROJECT 1: PackWise™ Cost Intelligence -->
-        <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-zinc-50/60 dark:bg-zinc-900/40 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 group hover:border-brand-500/50 transition-all duration-300">
+        <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-zinc-50/60 dark:bg-zinc-900/40 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 group hover:border-brand-500/50 transition-all duration-300 reveal">
             <div class="lg:col-span-6 space-y-5">
                 <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">SaaS & Packaging Intelligence</span>
                 <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-zinc-900 dark:text-white leading-tight">PackWise™ Cost Intelligence</h3>
@@ -539,7 +551,7 @@
 
 
         <!-- PROJECT 2: GREAD Africa -->
-        <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-zinc-50/60 dark:bg-zinc-900/40 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 group hover:border-brand-500/50 transition-all duration-300">
+        <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-zinc-50/60 dark:bg-zinc-900/40 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 group hover:border-brand-500/50 transition-all duration-300 reveal">
             <div class="lg:col-span-6 space-y-5 lg:order-2">
                 <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Digital News Platform</span>
                 <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-zinc-900 dark:text-white leading-tight">GREAD Africa</h3>
@@ -582,7 +594,7 @@
 
 
         <!-- PROJECT 3: Melvin Photography Studio -->
-        <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-zinc-50/60 dark:bg-zinc-900/40 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 group hover:border-brand-500/50 transition-all duration-300">
+        <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-zinc-50/60 dark:bg-zinc-900/40 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 group hover:border-brand-500/50 transition-all duration-300 reveal">
             <div class="lg:col-span-6 space-y-5">
                 <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Client Portfolio</span>
                 <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-zinc-900 dark:text-white leading-tight">Melvin Photography Studio</h3>
@@ -625,7 +637,7 @@
 
 
         <!-- PROJECT 4: Flautomation Academy -->
-        <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-zinc-50/60 dark:bg-zinc-900/40 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 group hover:border-brand-500/50 transition-all duration-300">
+        <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-zinc-50/60 dark:bg-zinc-900/40 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 group hover:border-brand-500/50 transition-all duration-300 reveal">
             <div class="lg:col-span-6 space-y-5 lg:order-2">
                 <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Client Landing Page</span>
                 <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-zinc-900 dark:text-white leading-tight">Flautomation Academy</h3>
@@ -668,7 +680,7 @@
 
 
         <!-- PROJECT 5: Plot-Twist Movie Database -->
-        <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-zinc-50/60 dark:bg-zinc-900/40 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 group hover:border-brand-500/50 transition-all duration-300">
+        <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-zinc-50/60 dark:bg-zinc-900/40 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 group hover:border-brand-500/50 transition-all duration-300 reveal">
             <div class="lg:col-span-6 space-y-5">
                 <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Web Application / API</span>
                 <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-zinc-900 dark:text-white leading-tight">Plot-Twist Movie Database</h3>
@@ -711,7 +723,7 @@
 
 
         <!-- PROJECT 6: KAMALA Waters -->
-        <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-zinc-50/60 dark:bg-zinc-900/40 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 group hover:border-brand-500/50 transition-all duration-300">
+        <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-zinc-50/60 dark:bg-zinc-900/40 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 group hover:border-brand-500/50 transition-all duration-300 reveal">
             <div class="lg:col-span-6 space-y-5 lg:order-2">
                 <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Brand Experience</span>
                 <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-zinc-900 dark:text-white leading-tight">KAMALA Waters</h3>
@@ -759,17 +771,19 @@
     <!-- SERVICES SECTION                                                  -->
     <!-- ================================================================= -->
     <section id="services" class="py-24 px-6 max-w-7xl mx-auto w-full border-t border-zinc-200/80 dark:border-zinc-800/80">
-        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3 reveal">
             <span class="text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Offerings</span>
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white tracking-tight">How I Can Help You</h2>
             <p class="text-zinc-600 dark:text-zinc-400 text-base sm:text-lg">Frontend engineering and UI implementation services tailored for startups and businesses.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-8 rounded-3xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 flex flex-col justify-between hover:border-brand-500/50 transition-all duration-300 group">
+            <div class="p-8 rounded-3xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 flex flex-col justify-between hover:border-brand-500/50 transition-all duration-300 group reveal delay-100">
                 <div class="space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform">
-                        💻
+                    <div class="w-12 h-12 rounded-2xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
                     </div>
                     <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white">React Web Applications</h3>
                     <p class="text-zinc-600 dark:text-zinc-300 text-base leading-relaxed">
@@ -783,10 +797,12 @@
                 </div>
             </div>
 
-            <div class="p-8 rounded-3xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 flex flex-col justify-between hover:border-brand-500/50 transition-all duration-300 group">
+            <div class="p-8 rounded-3xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 flex flex-col justify-between hover:border-brand-500/50 transition-all duration-300 group reveal delay-200">
                 <div class="space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform">
-                        🚀
+                    <div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-teal-600 dark:text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
                     </div>
                     <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white">High-Converting Landing Pages</h3>
                     <p class="text-zinc-600 dark:text-zinc-300 text-base leading-relaxed">
@@ -800,10 +816,12 @@
                 </div>
             </div>
 
-            <div class="p-8 rounded-3xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 flex flex-col justify-between hover:border-brand-500/50 transition-all duration-300 group">
+            <div class="p-8 rounded-3xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 flex flex-col justify-between hover:border-brand-500/50 transition-all duration-300 group reveal delay-300">
                 <div class="space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform">
-                        🎨
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                        </svg>
                     </div>
                     <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white">Figma to Pixel-Perfect Code</h3>
                     <p class="text-zinc-600 dark:text-zinc-300 text-base leading-relaxed">
@@ -824,7 +842,7 @@
     <!-- CERTIFICATIONS SECTION                                            -->
     <!-- ================================================================= -->
     <section id="certs" class="py-24 px-6 max-w-7xl mx-auto w-full border-t border-zinc-200/80 dark:border-zinc-800/80">
-        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3 reveal">
             <span class="text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Credentials</span>
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white tracking-tight">Professional Certifications</h2>
             <p class="text-zinc-600 dark:text-zinc-400 text-base sm:text-lg">Verified technical training, problem solving, and professional development credentials.</p>
@@ -833,7 +851,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             <!-- Cert Card 1 -->
-            <div class="cert-card cert-trigger cursor-pointer bg-zinc-50 dark:bg-zinc-900/60 p-6 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500/50 shadow-sm transition-all" data-cert-title="ALX Virtual Assistant Training">
+            <div class="cert-card cert-trigger cursor-pointer bg-zinc-50 dark:bg-zinc-900/60 p-6 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500/50 shadow-sm transition-all reveal delay-100" data-cert-title="ALX Virtual Assistant Training">
                 <div class="aspect-video bg-zinc-200 dark:bg-zinc-800 rounded-xl mb-6 overflow-hidden relative group">
                     <img src="assets/cert.png" alt="ALX Certificate" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-semibold gap-2">
@@ -853,7 +871,7 @@
             </div>
 
             <!-- Cert Card 2 -->
-            <div class="cert-card cert-trigger cursor-pointer bg-zinc-50 dark:bg-zinc-900/60 p-6 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500/50 shadow-sm transition-all" data-cert-title="Front-End Professional Foundations">
+            <div class="cert-card cert-trigger cursor-pointer bg-zinc-50 dark:bg-zinc-900/60 p-6 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500/50 shadow-sm transition-all reveal delay-200" data-cert-title="Front-End Professional Foundations">
                 <div class="aspect-video bg-zinc-200 dark:bg-zinc-800 rounded-xl mb-6 overflow-hidden relative group">
                     <img src="assets/cert1.jpeg" alt="Front-End Foundations Certificate" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-semibold gap-2">
@@ -873,7 +891,7 @@
             </div>
 
             <!-- Cert Card 3 -->
-            <div class="cert-card cert-trigger cursor-pointer bg-zinc-50 dark:bg-zinc-900/60 p-6 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500/50 shadow-sm transition-all" data-cert-title="Front-End Developer Certificate">
+            <div class="cert-card cert-trigger cursor-pointer bg-zinc-50 dark:bg-zinc-900/60 p-6 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500/50 shadow-sm transition-all reveal delay-300" data-cert-title="Front-End Developer Certificate">
                 <div class="aspect-video bg-zinc-200 dark:bg-zinc-800 rounded-xl mb-6 overflow-hidden relative group">
                     <img src="assets/cert2.jpeg" alt="Front-End Developer Certificate" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-semibold gap-2">
@@ -900,7 +918,7 @@
     <!-- CONTACT / HIRE ME SECTION                                         -->
     <!-- ================================================================= -->
     <section id="contact" class="py-24 px-6 max-w-7xl mx-auto w-full border-t border-zinc-200/80 dark:border-zinc-800/80">
-        <div class="rounded-3xl bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 text-white p-8 sm:p-14 md:p-20 relative overflow-hidden shadow-2xl">
+        <div class="rounded-3xl bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 text-white p-8 sm:p-14 md:p-20 relative overflow-hidden shadow-2xl reveal">
             
             <!-- Emerald Background Glow -->
             <div class="absolute top-0 right-0 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -984,7 +1002,9 @@
             <div class="flex items-center justify-between p-4 border-b border-zinc-800">
                 <h3 id="cert-modal-title" class="text-white font-bold text-base">Certificate Preview</h3>
                 <button id="cert-modal-close" aria-label="Close modal" class="w-9 h-9 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-white flex items-center justify-center transition">
-                    ✕
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
                 </button>
             </div>
             <div class="p-4 bg-zinc-950 flex items-center justify-center max-h-[80vh] overflow-auto">
@@ -997,8 +1017,11 @@
     <!-- ================================================================= -->
     <!-- FLOATING TOAST NOTIFICATION                                       -->
     <!-- ================================================================= -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-xl bg-zinc-900 text-white border border-zinc-700 shadow-xl text-sm font-semibold flex items-center gap-2 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300">
-        ✓ Copied to clipboard!
+    <div id="toast" class="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-xl bg-zinc-900 text-white border border-zinc-700 shadow-xl text-sm font-semibold flex items-center gap-2.5 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300">
+        <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+        </svg>
+        <span id="toast-message">Copied to clipboard!</span>
     </div>
 
 

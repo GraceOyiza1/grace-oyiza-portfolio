@@ -133,10 +133,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // -------------------------------------------------------------
     const copyEmailBtns = document.querySelectorAll('.copy-email-btn');
     const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
 
     function showToast(message) {
         if (!toast) return;
-        toast.textContent = message;
+        if (toastMsg) {
+            toastMsg.textContent = message;
+        } else {
+            toast.textContent = message;
+        }
         toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
         setTimeout(() => {
             toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
@@ -149,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = btn.getAttribute('data-email') || 'oyizagrace1@gmail.com';
             try {
                 await navigator.clipboard.writeText(email);
-                showToast(`✓ Copied ${email} to clipboard!`);
+                showToast(`Copied ${email} to clipboard!`);
             } catch (err) {
                 window.location.href = `mailto:${email}`;
             }
@@ -211,4 +216,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
+
+    // -------------------------------------------------------------
+    // 8. Smooth Scroll Reveal (IntersectionObserver)
+    // -------------------------------------------------------------
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.08,
+            rootMargin: '0px 0px -30px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    } else {
+        // Fallback for older browsers
+        revealElements.forEach(el => el.classList.add('active'));
+    }
 });
+
